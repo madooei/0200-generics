@@ -7,6 +7,7 @@ public class GpaComparator implements Comparator<Student> {
 
   @Override
   public int compare(Student a, Student b) {
-    return Double.compare(a.getGpa(), b.getGpa());
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

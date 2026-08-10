@@ -19,8 +19,8 @@ public class DynamicArray<T> {
   // is no way to create an array of a type parameter directly.
   @SuppressWarnings("unchecked")
   public DynamicArray() {
-    arr = (T[]) new Object[10];  // start with room for 10 elements
-    size = 0;                    // but the array is logically empty
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   public void add(T value) {
@@ -52,47 +52,27 @@ public class DynamicArray<T> {
 
   public int indexOf(T value) {
     for (int i = 0; i < size; i++) {
-      // Objects.equals compares contents and is null-safe on either side,
-      // unlike == (which would compare object references).
-      if (Objects.equals(arr[i], value)) {
-        return i;   // found at index i
-      }
+      // TODO: Implement me
+      throw new UnsupportedOperationException("TODO: Implement me");
     }
     return -1;      // not found
   }
 
   // Remove the element at a given index; return what was removed.
   public T remove(int index) {
-    if (index < 0 || index >= size) {
-      throw new IndexOutOfBoundsException();
-    }
-    T removed = arr[index];
-    // Shift later elements one slot left to close the gap, preserving order.
-    for (int j = index; j < size - 1; j++) {
-      arr[j] = arr[j + 1];
-    }
-    size--;
-    arr[size] = null;   // null, not 0, now that elements are objects
-    return removed;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Remove the first element equal to value; return whether anything was removed.
   public boolean remove(T value) {
-    int i = indexOf(value);
-    if (i == -1) {
-      return false;   // nothing to remove
-    }
-    remove(i);        // delegate the shifting to remove(int)
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   private void grow() {
     // Same cast rationale as the constructor: a fresh Object[] viewed as a T[].
-    @SuppressWarnings("unchecked")
-    T[] bigger = (T[]) new Object[arr.length * 2];
-    for (int i = 0; i < size; i++) {
-      bigger[i] = arr[i];
-    }
-    arr = bigger;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }
