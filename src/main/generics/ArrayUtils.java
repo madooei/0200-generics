@@ -2,43 +2,42 @@ package generics;
 
 import java.util.Comparator;
 
-/**
- * A namespace of general-purpose algorithms over a DynamicArray. Unlike
- * DynamicArray, this is not a blueprint: it holds no state and is never
- * instantiated. Each algorithm reaches the elements only through the public
- * size, get, and set operations.
- */
+/** A namespace of general-purpose algorithms over a DynamicArray. */
 public final class ArrayUtils {
 
   private ArrayUtils() {
     // This class is a namespace, not a blueprint — don't instantiate it.
   }
 
-  public static <T> void swap(DynamicArray<T> a, int i, int j) {
+  // Assumes list is not null.
+  public static <T> void swap(DynamicArray<T> list, int i, int j) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Returns the index of the smallest element in a[from..size), by natural order.
-  public static <T extends Comparable<T>> int indexOfMin(DynamicArray<T> a, int from) {
+  // Assumes list is not null. Returns the index of the smallest element
+  // from index `from` to the end, by natural order.
+  public static <T extends Comparable<T>> int indexOfMin(DynamicArray<T> list, int from) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Sorts a in place by each element's natural order (Comparable).
-  public static <T extends Comparable<T>> void selectionSort(DynamicArray<T> a) {
+  // Assumes list is not null. Sorts in place by each element's natural order.
+  public static <T extends Comparable<T>> void selectionSort(DynamicArray<T> list) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Returns the index of the smallest element in a[from..size), by the given order.
-  public static <T> int indexOfMin(DynamicArray<T> a, int from, Comparator<T> cmp) {
+  // Assumes list is not null. Returns the index of the smallest element
+  // from index `from` to the end, by the given order.
+  public static <T> int indexOfMin(DynamicArray<T> list, int from, Comparator<T> cmp) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Sorts a in place by the order supplied in cmp; elements need not be Comparable.
-  public static <T> void selectionSort(DynamicArray<T> a, Comparator<T> cmp) {
+  // Assumes list is not null. Sorts in place by the order supplied in cmp;
+  // elements need not be Comparable.
+  public static <T> void selectionSort(DynamicArray<T> list, Comparator<T> cmp) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
