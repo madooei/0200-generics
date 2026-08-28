@@ -1,9 +1,7 @@
 # Generics
 
 A growable array that works for any element type, evolved from Chapter 1's
-int-only `DynamicArray`. This is the reference code for this chapter — the
-classes here are assembled exactly as the chapter notes build them up, step
-by step.
+int-only `DynamicArray`.
 
 ## Prerequisites
 
