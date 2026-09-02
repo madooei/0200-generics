@@ -72,8 +72,9 @@ public class DynamicArray<T> {
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
+  // Same cast rationale as the constructor: a fresh Object[] viewed as a T[].
+  @SuppressWarnings("unchecked")
   private void grow() {
-    // Same cast rationale as the constructor: a fresh Object[] viewed as a T[].
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
   }
