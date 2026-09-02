@@ -80,17 +80,17 @@ public class DynamicArray<T> {
 
   // Remove the first element equal to value; return whether anything was removed.
   public boolean remove(T value) {
-    int i = indexOf(value);
-    if (i == -1) {
+    int index = indexOf(value);
+    if (index == -1) {
       return false;   // nothing to remove
     }
-    remove(i);        // delegate the shifting to remove(int)
+    remove(index);    // delegate the shifting to remove(int)
     return true;
   }
 
+  // Same cast rationale as the constructor: a fresh Object[] viewed as a T[].
+  @SuppressWarnings("unchecked")
   private void grow() {
-    // Same cast rationale as the constructor: a fresh Object[] viewed as a T[].
-    @SuppressWarnings("unchecked")
     T[] bigger = (T[]) new Object[arr.length * 2];
     for (int i = 0; i < size; i++) {
       bigger[i] = arr[i];
