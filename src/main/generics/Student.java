@@ -1,10 +1,6 @@
 package generics;
 
-/**
- * A student record. Two students are equal when their ids match, and a
- * student's natural order is by id as well — keeping equals and compareTo
- * consistent.
- */
+/** A student record. */
 public class Student implements Comparable<Student> {
   private int id;
   private String name;
