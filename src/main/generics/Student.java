@@ -24,17 +24,6 @@ public class Student implements Comparable<Student> {
     return gpa;
   }
 
-  @Override
-  public boolean equals(Object o) {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
-  }
-
-  @Override
-  public int hashCode() {
-    // TODO: Implement me
-    throw new UnsupportedOperationException("TODO: Implement me");
-  }
 
   @Override
   public int compareTo(Student other) {
